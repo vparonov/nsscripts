@@ -20,6 +20,9 @@ for f in *.txt; do ./postprocess.pl $f > res/"un_"$f; done # обработва 
 
 ```
 chmod +x annotate.pl
-for f in res/*.txt; do ./annotate.pl $f >> res/tmp_annotations; done && cat res/tmp_annotations | sort > res/annotations && rm res/tmp_annotations
+for f in res/*.txt; do ./annotate.pl $f >> res/tmp_annotations; done && \
+  cat res/tmp_annotations | \
+  sort > res/annotations && \
+  rm res/tmp_annotations
 # резултатът е във файл res/annotations 
 ```
